@@ -9,27 +9,50 @@ class UserPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Profile'),
       ),
-      body: Card(
-        child: ListView(
-          children: <Widget>[
-            ListTile(
-              leading: Icon(Icons.chrome_reader_mode),
-              title: Text('Profile Details'),
-              subtitle: Text('Change your profile details'),
-              trailing: Icon(Icons.chevron_right),
-              onTap: _handleProfileDetailsAction,
+      body: Column(
+        children: <Widget>[
+          Card(
+            child: Column(
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    _buildProfileDetailsTile(),
+                    Divider(),
+                  ],
+                ),
+                _buildSettingsTile(),
+              ],
             ),
-            ListTile(
-              leading: Icon(Icons.settings_cell),
-              title: Text('Settings'),
-              subtitle: Text('Manage app settings & password'),
-              trailing: Icon(Icons.chevron_right),
-              onTap: _handleSettingsAction,
-            ),
-          ],
-        ),
+          ),
+          RaisedButton(
+            child: Text('Logout'),
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, '/');
+            },
+          ),
+        ],
       ),
       bottomNavigationBar: MyBottomBar(2),
+    );
+  }
+
+  Widget _buildProfileDetailsTile() {
+    return ListTile(
+      leading: Icon(Icons.chrome_reader_mode),
+      title: Text('Profile Details'),
+      subtitle: Text('Change your profile details'),
+      trailing: Icon(Icons.chevron_right),
+      onTap: _handleProfileDetailsAction,
+    );
+  }
+
+  Widget _buildSettingsTile() {
+    return ListTile(
+      leading: Icon(Icons.settings_cell),
+      title: Text('Settings'),
+      subtitle: Text('Manage app settings & password'),
+      trailing: Icon(Icons.chevron_right),
+      onTap: _handleSettingsAction,
     );
   }
 
