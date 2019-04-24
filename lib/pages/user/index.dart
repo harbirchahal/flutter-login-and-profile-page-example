@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_login_and_profile_page_example/widgets/bottom_bar.dart';
+
 class UserPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -27,6 +29,7 @@ class UserPage extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: MyBottomBar(2),
     );
   }
 

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_login_and_profile_page_example/widgets/bottom_bar.dart';
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,6 +13,10 @@ class HomePage extends StatelessWidget {
           _buildNotificationButton(),
         ],
       ),
+      body: Center(
+        child: Text('Home'),
+      ),
+      bottomNavigationBar: MyBottomBar(0),
     );
   }
 

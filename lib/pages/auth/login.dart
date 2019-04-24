@@ -74,6 +74,6 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   void _handleLoginAction() {
-    print('Login action');
+    Navigator.pushReplacementNamed(context, 'home');
   }
 }
