@@ -4,6 +4,8 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_login_and_profile_page_example/pages/auth/login.dart';
 import 'package:flutter_login_and_profile_page_example/pages/home/index.dart';
 import 'package:flutter_login_and_profile_page_example/pages/user/index.dart';
+import 'package:flutter_login_and_profile_page_example/pages/user/profile.dart';
+import 'package:flutter_login_and_profile_page_example/pages/user/settings.dart';
 
 void main() {
   // debugPaintSizeEnabled = true;
@@ -22,7 +24,9 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => LoginPage(),
         'home': (context) => HomePage(),
-        'user': (context) => UserPage()
+        'user': (context) => UserPage(),
+        'user/profile': (context) => ProfilePage(),
+        'user/settings': (context) => SettingsPage(),
       },
       onGenerateRoute: (RouteSettings settings) {
         print('[MyApp] onGenerateRoute: ' + settings.toString());

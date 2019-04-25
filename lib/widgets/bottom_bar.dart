@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
 
 class MyBottomBar extends StatelessWidget {
-  final int currentIndex;
+  final String barItem;
+  final Map<String, int> _barItemIndexMap = {
+    'home': 0,
+    'more': 1,
+    'user': 2,
+  };
 
-  MyBottomBar(this.currentIndex);
+  MyBottomBar(this.barItem);
 
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      currentIndex: currentIndex,
+      currentIndex: _barItemIndexMap[barItem],
       items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
-          title: Text('Text'),
+          title: Text('Home'),
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.view_module),
@@ -34,6 +39,7 @@ class MyBottomBar extends StatelessWidget {
         break;
 
       case 1:
+        print('More action');
         break;
 
       case 2:
