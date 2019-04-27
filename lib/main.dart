@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-import 'package:flutter_login_and_profile_page_example/pages/auth/login.dart';
-import 'package:flutter_login_and_profile_page_example/pages/home/index.dart';
-import 'package:flutter_login_and_profile_page_example/pages/user/index.dart';
-import 'package:flutter_login_and_profile_page_example/pages/user/profile.dart';
-import 'package:flutter_login_and_profile_page_example/pages/user/settings.dart';
+import 'package:flutter_login_and_user_profile_example/pages/auth/login.dart';
+import 'package:flutter_login_and_user_profile_example/pages/home/index.dart';
+import 'package:flutter_login_and_user_profile_example/pages/user/index.dart';
+import 'package:flutter_login_and_user_profile_example/pages/user/profile.dart';
+import 'package:flutter_login_and_user_profile_example/pages/user/settings.dart';
 
 void main() {
   // debugPaintSizeEnabled = true;
@@ -46,6 +46,9 @@ class MyApp extends StatelessWidget {
                     Text(settings.name),
                     FlatButton(
                       child: Text('Home'),
+                      onPressed: () {
+                        Navigator.pushReplacementNamed(context, 'home');
+                      },
                     ),
                   ],
                 ),

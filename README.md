@@ -1,4 +1,4 @@
-# Flutter login and profile page example
+# Flutter login and user profile example
 
 A new Flutter project.
 

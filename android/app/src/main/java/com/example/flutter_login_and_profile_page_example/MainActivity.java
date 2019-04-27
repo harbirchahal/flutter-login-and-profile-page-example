@@ -1,4 +1,4 @@
-package com.example.flutter_login_and_profile_page_example;
+package com.example.flutter_login_and_user_profile_example;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
